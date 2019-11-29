@@ -1,0 +1,24 @@
+{
+  "name": "http-decorators",
+  "version": "1.0.0",
+  "description": "some decorators about http",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "typescript",
+    "http",
+    "decorator"
+  ],
+  "author": "isaac_宝华",
+  "license": "ISC",
+  "devDependencies": {
+    "tslib": "^1.10.0",
+    "typescript": "^3.7.2"
+  },
+  "dependencies": {
+    "class-transformer": "^0.2.3",
+    "class-validator": "^0.11.0"
+  }
+}
