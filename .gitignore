@@ -9,7 +9,7 @@ logs/
 .vscode
 *.swp
 *.lock
-*.js
+index.js
 .env*
 static/*
 !static/favicon.ico
@@ -25,4 +25,5 @@ config/**/*.map
 nohup.out
 script/*.log.*
 script/**/*.log.*
-typings/*
+index.d.ts
+dist

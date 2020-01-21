@@ -10,6 +10,7 @@
     "charset": "utf8",
     "allowJs": false,
     "pretty": true,
+    "declaration": true,
     "noEmitOnError": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
@@ -25,5 +26,5 @@
   "include": [
     "./"
   ],
-  "exclude": []
+  "exclude": ["example/"]
 }

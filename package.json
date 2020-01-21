@@ -1,11 +1,15 @@
 {
   "name": "http-decorators",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "some decorators about http",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc:dev": "tsc -W -P ./tsconfig.json",
+    "build": "tsc -P ./tsconfig.json && gulp build",
+    "clear:dist": "gulp clearDist"
   },
+  "files": ["dist"],
   "keywords": [
     "typescript",
     "http",
@@ -14,11 +18,19 @@
   "author": "isaac_宝华",
   "license": "ISC",
   "devDependencies": {
+    "@types/lodash": "^4.14.149",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-cli": "^2.2.0",
+    "gulp-concat": "^2.6.1",
     "tslib": "^1.10.0",
-    "typescript": "^3.7.2"
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.5"
   },
   "dependencies": {
     "class-transformer": "^0.2.3",
-    "class-validator": "^0.11.0"
+    "class-validator": "^0.11.0",
+    "lodash": "^4.17.15",
+    "reflect-metadata": "^0.1.13"
   }
 }
