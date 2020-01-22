@@ -12,6 +12,7 @@ export interface HttpDecoratorInitOptions {
 export interface RouterInfoItem {
   method: string;
   path: string;
+  member: string;
 }
 
 export interface HttpDecorator {

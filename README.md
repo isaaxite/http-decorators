@@ -34,14 +34,70 @@ const routerArr = httpDecrator.getRouters();
 
 console.log(routerArr);
 ```
-```
-# output
+![image-20200122171744559](./asset/image-20200122171744559.png)
 
-[
-  { method: 'get', path: '/api/foo/name' },
-  { method: 'put', path: '/api/foo/name' }
-]
+#### Use with [Egg](https://eggjs.org/en/tutorials/typescript.html)
+
+```shell
+$ mkdir showcase && cd showcase
+$ npm init egg --type=ts
+$ npm i
 ```
+
+```typescript
+// home.ts
+import { Control, Get } from 'http-decorators'
+import { Controller } from 'egg';
+
+@Control('home')
+export default class HomeController extends Controller {
+  @Get()
+  public async index() {
+    const { ctx } = this;
+    ctx.body = await ctx.service.test.sayHi('egg');
+  }
+
+  @Get('http-decorator')
+  public async httpDecorator() {
+    const { ctx } = this;
+    ctx.body = await ctx.service.test.sayHi('http-decorator');
+  }
+}
+```
+
+```typescript
+// router.ts
+import { Application } from 'egg';
+import { HttpDecrator } from 'http-decorators'
+import { readdirSync } from 'fs';
+import * as path from 'path';
+
+export default (app: Application) => {
+  const { controller, router } = app;
+  const controlDir = path.resolve(__dirname, './controller');
+  const fileNameArr = readdirSync(controlDir);
+
+  for (const controlFileName of fileNameArr) {
+    const controlFilePath = path.join(controlDir, controlFileName);
+    const target = require(controlFilePath).default;
+    const {name: nameNoFromat} = path.parse(controlFilePath);
+    const httpDecIns = new HttpDecrator(target, { prefix: '/api' });
+    const routerArr = httpDecIns.getRouters();
+
+    console.log(Date.now(), routerArr);
+
+    for (const it of routerArr) {
+      router[it.method](it.path, controller[nameNoFromat][it.member]);
+    }
+  }
+};
+```
+
+```shell
+npm run dev
+```
+
+![image-20200122171456787](./asset/image-20200122171456787.png)
 
 ## Contributing
 
