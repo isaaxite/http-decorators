@@ -1,6 +1,6 @@
 {
   "name": "http-decorators",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "some decorators about http",
   "main": "dist/index.js",
   "scripts": {
@@ -9,7 +9,9 @@
     "build": "tsc -P ./tsconfig.json && gulp build",
     "clear:dist": "gulp clearDist"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "typescript",
     "http",

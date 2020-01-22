@@ -79,7 +79,7 @@ export class HttpDecrator implements HttpDecorator {
   public getRouter(_methodName: string) {
     const { httpMethod, prefix, controlPart, methodPart } = this.getRouterPart(_methodName);
     const routerPath: string = [prefix, controlPart, methodPart].join('/');
-    return { method: httpMethod, path: routerPath };
+    return { method: httpMethod, path: routerPath, member: _methodName };
   }
 
   public getRouters() {
