@@ -1,6 +1,6 @@
 # http-decorators
 
-This project is a typescript library. It will provide some common HTTP method decorators, such as `@Control()`, `@Get()`, `@post()`, `@Delete()`, `@Put()`. For details, please refer to the declaration file. We can use these decorators to combine routes as gracefully as a [typeorm](https://github.com/typeorm/typeorm).
+This project is a typescript library. It will provide some common HTTP method decorators, such as `@Control()`, `@Get()`, `@post()`, `@Delete()`, `@Put()`. For details, please refer to the declaration file. We can use these decorators to combine routes as gracefully as a [nestjs](https://github.com/nestjs/nest).
 
 ## Install
 
