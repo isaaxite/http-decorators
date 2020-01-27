@@ -1,6 +1,6 @@
 {
   "name": "http-decorators",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "some decorators about http",
   "main": "dist/index.js",
   "scripts": {

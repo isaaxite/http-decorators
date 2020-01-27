@@ -22,6 +22,10 @@ export const Get = createHttpMethodDecorator(HttpMethodEnum.GET);
 export const Post = createHttpMethodDecorator(HttpMethodEnum.POST);
 export const Put = createHttpMethodDecorator(HttpMethodEnum.PUT);
 export const Delete = createHttpMethodDecorator(HttpMethodEnum.DELETE);
+export const Patch = createHttpMethodDecorator(HttpMethodEnum.PATCH);
+export const All = createHttpMethodDecorator(HttpMethodEnum.ALL);
+export const Options = createHttpMethodDecorator(HttpMethodEnum.OPTIONS);
+export const Head = createHttpMethodDecorator(HttpMethodEnum.HEAD);
 
 export const Control = (prefix: string = '') => {
   return (target: any) => {
