@@ -1,13 +1,14 @@
 {
   "name": "http-decorators",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "some decorators about http",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc:dev": "tsc -W -P ./tsconfig.json",
     "build": "tsc -P ./tsconfig.json && gulp build",
-    "clear:dist": "gulp clearDist"
+    "clear:dist": "gulp clearDist",
+    "publish": "npm run clear:dist && npm run build && npm publish"
   },
   "files": [
     "dist"
@@ -30,8 +31,6 @@
     "typescript": "^3.7.5"
   },
   "dependencies": {
-    "class-transformer": "^0.2.3",
-    "class-validator": "^0.11.0",
     "lodash": "^4.17.15",
     "reflect-metadata": "^0.1.13"
   }

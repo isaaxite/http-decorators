@@ -34,7 +34,7 @@ const routerArr = httpDecrator.getRouters();
 
 console.log(routerArr);
 ```
-![image-20200122171744559](./asset/image-20200122171744559.png)
+![image-20200122171744559](https://github.com/isaaxite/http-decorators/raw/master/asset/image-20200122171744559.png)
 
 #### Use with [Egg](https://eggjs.org/en/tutorials/typescript.html)
 
@@ -97,7 +97,7 @@ export default (app: Application) => {
 npm run dev
 ```
 
-![image-20200122171456787](./asset/image-20200122171456787.png)
+![image-20200122171456787](https://github.com/isaaxite/http-decorators/raw/master/asset/image-20200122171456787.png)
 
 ## Contributing
 
